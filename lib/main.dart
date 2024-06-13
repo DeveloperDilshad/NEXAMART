@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/features/auth/screens/auth_screen.dart';
+import 'package:nexamart/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +15,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        colorScheme:
+            const ColorScheme.light(primary: GlobalVariables.secondaryColor),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+        ),
       ),
-      home: const Text('Flutter Demo Home Page'),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: AuthScreen(),
     );
   }
 }
