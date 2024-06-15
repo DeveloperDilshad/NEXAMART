@@ -11,6 +11,7 @@ const DB =
   "mongodb+srv://Dilshad:dilshad1041@cluster0.mcgvrw2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 //MIDDLEWARE
+app.use(express.json());
 app.use(authRouter);
 
 //CONNECTIONS
@@ -25,6 +26,6 @@ mongoose
 
 const PORT = 3000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log("connected at port " + PORT);
 });
