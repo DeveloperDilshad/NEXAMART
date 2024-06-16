@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nexamart/common/widgets/custom_textfield.dart';
 import 'package:nexamart/common/widgets/custon_button.dart';
 import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/features/auth/services/auth_service.dart';
 
 enum Auth { signIn, signUp }
 
@@ -17,6 +18,7 @@ class _AuthScreenState extends State<AuthScreen> {
   Auth _auth = Auth.signUp;
   final _signUpFormKey = GlobalKey<FormState>();
   final _signInFormKey = GlobalKey<FormState>();
+  final AuthService authService = AuthService();
   final TextEditingController _emailControiller = TextEditingController();
   final TextEditingController _passwordControiller = TextEditingController();
   final TextEditingController _nameControiller = TextEditingController();
@@ -27,6 +29,21 @@ class _AuthScreenState extends State<AuthScreen> {
     _emailControiller.dispose();
     _passwordControiller.dispose();
     _nameControiller.dispose();
+  }
+
+  void signupUser() {
+    authService.signupUser(
+        name: _nameControiller.text,
+        email: _emailControiller.text,
+        password: _passwordControiller.text,
+        context: context);
+  }
+
+  void signinUser() {
+    authService.signinUser(
+        email: _emailControiller.text,
+        password: _passwordControiller.text,
+        context: context);
   }
 
   @override
@@ -93,7 +110,13 @@ class _AuthScreenState extends State<AuthScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      CustomButton(text: 'Sign Up', onTap: () {})
+                      CustomButton(
+                          text: 'Sign Up',
+                          onTap: () {
+                            if (_signUpFormKey.currentState!.validate()) {
+                              signupUser();
+                            }
+                          })
                     ],
                   ),
                 ),
@@ -124,7 +147,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 padding: const EdgeInsets.all(8),
                 color: GlobalVariables.backgroundColor,
                 child: Form(
-                  key: _signUpFormKey,
+                  key: _signInFormKey,
                   child: Column(
                     children: [
                       const SizedBox(
@@ -144,7 +167,13 @@ class _AuthScreenState extends State<AuthScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      CustomButton(text: 'Sign In', onTap: () {})
+                      CustomButton(
+                          text: 'Sign In',
+                          onTap: () {
+                            if (_signInFormKey.currentState!.validate()) {
+                              signinUser();
+                            }
+                          })
                     ],
                   ),
                 ),
