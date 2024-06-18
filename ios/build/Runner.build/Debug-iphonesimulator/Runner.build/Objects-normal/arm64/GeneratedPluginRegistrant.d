@@ -17,4 +17,7 @@ dependencies: \
   /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngineGroup.h \
   /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
   /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
-  /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterViewController.h
+  /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/shared_preferences_foundation/shared_preferences_foundation.framework/Modules/module.modulemap \
+  /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/shared_preferences_foundation/shared_preferences_foundation.framework/Headers/shared_preferences_foundation-umbrella.h \
+  /Users/dilshadp/nexamart/build/ios/Debug-iphonesimulator/shared_preferences_foundation/shared_preferences_foundation.framework/Headers/shared_preferences_foundation-Swift.h
