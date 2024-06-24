@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nexamart/common/widgets/bottom_bar.dart';
 import 'package:nexamart/constants/global_variables.dart';
 import 'package:nexamart/features/auth/screens/auth_screen.dart';
 import 'package:nexamart/features/auth/services/auth_service.dart';
@@ -33,6 +34,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
@@ -47,7 +49,7 @@ class _MyAppState extends State<MyApp> {
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const HomeScreen()
+          ? const BottomBar()
           : const AuthScreen(),
     );
   }
