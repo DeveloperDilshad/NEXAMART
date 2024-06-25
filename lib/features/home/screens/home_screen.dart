@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nexamart/constants/global_variables.dart';
 import 'package:nexamart/features/home/widgets/address_box.dart';
+import 'package:nexamart/features/home/widgets/carousel_image.dart';
+import 'package:nexamart/features/home/widgets/deal_of_day.dart';
 import 'package:nexamart/features/home/widgets/top_catagories.dart';
-import 'package:nexamart/provider/user_provider.dart';
-import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -88,14 +88,21 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: const Column(
-        children: [
-          AddressBox(),
-          SizedBox(
-            height: 10,
-          ),
-          TopCatagories(),
-        ],
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            AddressBox(),
+            SizedBox(
+              height: 10,
+            ),
+            TopCatagories(),
+            SizedBox(
+              height: 10,
+            ),
+            CarouselImage(),
+            DealOfDay()
+          ],
+        ),
       ),
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nexamart/common/widgets/bottom_bar.dart';
 import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/features/admin/screens/admin_screen.dart';
 import 'package:nexamart/features/auth/screens/auth_screen.dart';
 import 'package:nexamart/features/auth/services/auth_service.dart';
-import 'package:nexamart/features/home/screens/home_screen.dart';
 import 'package:nexamart/provider/user_provider.dart';
 import 'package:nexamart/router.dart';
 import 'package:provider/provider.dart';
@@ -49,7 +49,9 @@ class _MyAppState extends State<MyApp> {
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const BottomBar()
+          ? Provider.of<UserProvider>(context).user.type == 'user'
+              ? const BottomBar()
+              : const AdminScreen()
           : const AuthScreen(),
     );
   }
