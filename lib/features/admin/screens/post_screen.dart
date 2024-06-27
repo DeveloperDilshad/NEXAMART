@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nexamart/features/admin/screens/add_product_screen.dart';
+import 'package:nexamart/features/admin/services/admin_service.dart';
+import 'package:nexamart/models/product.dart';
 
 class PostScreen extends StatefulWidget {
   const PostScreen({super.key});
@@ -9,6 +11,19 @@ class PostScreen extends StatefulWidget {
 }
 
 class _PostScreenState extends State<PostScreen> {
+  List<Product>? products = [];
+  final AdminServices adminServices = AdminServices();
+
+  @override
+  void initState() {
+    super.initState();
+    fetchAllProducts();
+  }
+
+  fetchAllProducts() async {
+    await adminServices.fetchAllProducts(context);
+  }
+
   void navigateToAddProduct() {
     Navigator.pushNamed(context, AddProductScreen.routeName);
   }
