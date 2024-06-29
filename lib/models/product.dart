@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class Product {
   final String name;
   final String description;
@@ -9,6 +8,7 @@ class Product {
   final String category;
   final double price;
   String? id;
+  String? userId;
 
   Product({
     required this.name,
@@ -18,6 +18,7 @@ class Product {
     required this.category,
     required this.price,
     this.id,
+    this.userId,
   });
 
   Map<String, dynamic> toMap() {
@@ -29,6 +30,7 @@ class Product {
       'category': category,
       'price': price,
       'id': id,
+      'userId': userId,
     };
   }
 
@@ -36,12 +38,14 @@ class Product {
     return Product(
       name: map['name'] as String,
       description: map['description'] as String,
-      quantity: map['quantity'] as double,
-      images:
-          List<String>.from(map['images'] as List<dynamic>), // Corrected line
+      quantity: (map['quantity'] as num).toDouble(), // Cast to double
+      images: List<String>.from(map['images'] as List<dynamic>),
       category: map['category'] as String,
-      price: map['price'] as double,
-      id: map['_id'] != null ? map['id'] as String : null,
+      price: (map['price'] as num).toDouble(), // Cast to double
+      id: map['_id'] != null
+          ? map['_id'] as String
+          : null, // Adjust for MongoDB's `_id` field
+      userId: map['userId'] != null ? map['userId'] as String : null,
     );
   }
 

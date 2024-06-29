@@ -30,4 +30,15 @@ adminRout.get("/admin/get-products", admin, async (req, res) => {
   }
 });
 
+adminRout.post("/admin/delete-product", admin, async (req, res) => {
+  try {
+    const { id } = req.body;
+    let product = await Product.findByIdAndDelete(id);
+    res.json(product);
+  } catch (e) {
+    console.error(e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
 module.exports = adminRout;
