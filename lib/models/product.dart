@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:nexamart/models/rating.dart';
+
 class Product {
   final String name;
   final String description;
@@ -9,6 +11,7 @@ class Product {
   final double price;
   String? id;
   String? userId;
+  final List<Rating>? rating;
 
   Product({
     required this.name,
@@ -19,6 +22,7 @@ class Product {
     required this.price,
     this.id,
     this.userId,
+    this.rating,
   });
 
   Map<String, dynamic> toMap() {
@@ -31,22 +35,29 @@ class Product {
       'price': price,
       'id': id,
       'userId': userId,
+      'rating': rating,
     };
   }
 
   factory Product.fromMap(Map<String, dynamic> map) {
     return Product(
-      name: map['name'] as String,
-      description: map['description'] as String,
-      quantity: (map['quantity'] as num).toDouble(), // Cast to double
-      images: List<String>.from(map['images'] as List<dynamic>),
-      category: map['category'] as String,
-      price: (map['price'] as num).toDouble(), // Cast to double
-      id: map['_id'] != null
-          ? map['_id'] as String
-          : null, // Adjust for MongoDB's `_id` field
-      userId: map['userId'] != null ? map['userId'] as String : null,
-    );
+        name: map['name'] as String,
+        description: map['description'] as String,
+        quantity: (map['quantity'] as num).toDouble(), // Cast to double
+        images: List<String>.from(map['images'] as List<dynamic>),
+        category: map['category'] as String,
+        price: (map['price'] as num).toDouble(), // Cast to double
+        id: map['_id'] != null
+            ? map['_id'] as String
+            : null, // Adjust for MongoDB's `_id` field
+        userId: map['userId'] != null ? map['userId'] as String : null,
+        rating: map['ratings'] != null
+            ? List<Rating>.from(
+                map['ratings']?.map(
+                  (x) => Rating.fromMap(x),
+                ),
+              )
+            : null);
   }
 
   String toJson() => json.encode(toMap());
