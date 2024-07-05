@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:nexamart/constants/global_variables.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:nexamart/features/account/screens/account_screen.dart';
+import 'package:nexamart/features/cart/screens/cart_screen.dart';
 import 'package:nexamart/features/home/screens/home_screen.dart';
+import 'package:nexamart/provider/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class BottomBar extends StatefulWidget {
   static const String routeName = '/actual-home';
@@ -20,9 +23,7 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget> pages = [
     const HomeScreen(),
     const AccountScreen(),
-    const Center(
-      child: Text('Cart page'),
-    ),
+    const CartScreen(),
   ];
 
   void updatePage(int page) {
@@ -33,6 +34,7 @@ class _BottomBarState extends State<BottomBar> {
 
   @override
   Widget build(BuildContext context) {
+    final userCartLen = context.watch<UserProvider>().user.cart.length;
     return Scaffold(
       body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
@@ -77,23 +79,25 @@ class _BottomBarState extends State<BottomBar> {
               label: ''),
           BottomNavigationBarItem(
               icon: Container(
-                width: bottomBarWidth,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      color: _page == 2
-                          ? GlobalVariables.selectedNavBarColor
-                          : GlobalVariables.backgroundColor,
-                      width: bottomBarBorderWidth,
+                  width: bottomBarWidth,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                        color: _page == 2
+                            ? GlobalVariables.selectedNavBarColor
+                            : GlobalVariables.backgroundColor,
+                        width: bottomBarBorderWidth,
+                      ),
                     ),
                   ),
-                ),
-                child: const badges.Badge(
-                  badgeContent: Text('2'),
-                  badgeStyle: badges.BadgeStyle(badgeColor: Colors.white),
-                  child: Icon(Icons.shopping_cart_outlined),
-                ),
-              ),
+                  child: badges.Badge(
+                    badgeContent: Text(
+                      userCartLen.toString(),
+                    ),
+                    badgeStyle:
+                        const badges.BadgeStyle(badgeColor: Colors.white),
+                    child: const Icon(Icons.shopping_cart_outlined),
+                  )),
               label: ''),
         ],
       ),

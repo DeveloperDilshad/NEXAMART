@@ -20,7 +20,7 @@ void httpErrorHandle({
       break;
     case 500:
       showSnackbar(context, jsonDecode(response.body)['error']);
-      print('2');
+      print(jsonDecode(response.body)['error']);
       break;
     default:
       showSnackbar(context, response.body);
