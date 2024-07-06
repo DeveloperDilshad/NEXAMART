@@ -1,0 +1,170 @@
+{
+  "main_library": {
+    "exported_symbols": [
+      {
+        "data": {
+          "global": [
+            "_$s7pay_ios14PaymentHandlerC15canMakePaymentsySbSSF",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvM",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC15createArgsCodecSo014FlutterMessageJ0_So8NSObjectpyF",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvpfi",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC9messenger33_8AE0879CCA5EA46F8286CA353DB85A52LLSo22FlutterBinaryMessenger_pvg",
+            "_$s7pay_ios25ApplePayButtonViewFactoryCfD",
+            "_$s7pay_ios18ApplePayButtonViewCMn",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC9messengerACSo22FlutterBinaryMessenger_p_tcfc",
+            "_$sSo15PKPaymentMethodC7pay_iosE12toDictionarySDySSypGyF",
+            "_$s10Foundation20PersonNameComponentsV7pay_iosE12toDictionarySDySSypGSgyF",
+            "_$sSo24PKPaymentSummaryItemTypeV7pay_iosE10fromStringyABSSFZ",
+            "_$s7pay_ios18ApplePayButtonViewC17handleFlutterCall_6resultySo0h6MethodI0C_yypSgctF",
+            "_$s7pay_ios18ApplePayButtonViewC5frame14viewIdentifier9arguments15binaryMessengerACSo6CGRectV_s5Int64VypSgSo013FlutterBinaryL0_ptcfCTq",
+            "_$s7pay_ios9PayPluginCN",
+            "_$s7pay_ios18ApplePayButtonViewC06handlecdE6TappedyyF",
+            "_$s7pay_ios20PaymentHandlerStatusO9hashValueSivg",
+            "_$s7pay_ios20PaymentHandlerStatusOMn",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC9messenger33_8AE0879CCA5EA46F8286CA353DB85A52LLSo22FlutterBinaryMessenger_pvs",
+            "_$sSo16PKPaymentNetworka7pay_iosE10fromStringyABSgSSFZ",
+            "_$s7pay_ios20PaymentHandlerStatusOSHAAMc",
+            "_$s7pay_ios18ApplePayButtonViewC5frame14viewIdentifier9arguments15binaryMessengerACSo6CGRectV_s5Int64VypSgSo013FlutterBinaryL0_ptcfc",
+            "_$s7pay_ios14PaymentHandlerCACycfc",
+            "_$s7pay_ios18ApplePayButtonViewC06createcdF04type5style12cornerRadiusySS_SSSfSgtF",
+            "_$s7pay_ios25ApplePayButtonViewFactoryCACycfC",
+            "_$s7pay_ios14PaymentHandlerCACycfC",
+            "_$s7pay_ios20PaymentHandlerStatusO9hashValueSivpMV",
+            "_$s7pay_ios18ApplePayButtonViewC4viewSo6UIViewCyF",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC6create9withFrame14viewIdentifier9argumentsSo015FlutterPlatformF0_pSo6CGRectV_s5Int64VypSgtFTq",
+            "_$sSo9PKContactC7pay_iosE12toDictionarySDySSypGyF",
+            "_$s7pay_ios18ApplePayButtonViewC23buttonMethodChannelNameSSvgZ",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvpWvd",
+            "_$s7pay_ios9PayPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+            "_$s7pay_ios18ApplePayButtonViewCACycfc",
+            "_$s7pay_ios14PaymentHandlerCfD",
+            "_$s7pay_ios18ApplePayButtonViewCfD",
+            "_$s7pay_ios14PaymentHandlerC30paymentAuthorizationController_012didAuthorizeC07handlerySo09PKPaymentfG0C_So0K0CySo0kF6ResultCctF",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvpfi",
+            "_$s7pay_ios18ApplePayButtonViewCACycfC",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC15createArgsCodecSo014FlutterMessageJ0_So8NSObjectpyFTq",
+            "_$sSo16PKShippingMethodC7pay_iosE12toDictionarySDySSypSgGyF",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC9messengerACSo22FlutterBinaryMessenger_p_tcfC",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC6create9withFrame14viewIdentifier9argumentsSo015FlutterPlatformF0_pSo6CGRectV_s5Int64VypSgtF",
+            "_$s7pay_ios9PayPluginCACycfC",
+            "_$s7pay_ios25ApplePayButtonViewFactoryCACycfc",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvMTq",
+            "_$s7pay_ios18ApplePayButtonViewC23buttonMethodChannelNameSSvau",
+            "_$s7pay_ios9PayPluginC25methodShowPaymentSelector33_27ECFF441B671714DBA1A6635FF21ED4LLSSvpfi",
+            "_$s7pay_ios14PaymentHandlerCMn",
+            "_$s7pay_ios20PaymentHandlerStatusOMa",
+            "_$s7pay_ios14PaymentHandlerCMa",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvgTq",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvpMV",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvg",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvsTq",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvsTq",
+            "_$s7pay_ios18ApplePayButtonViewC17handleFlutterCall_6resultySo0h6MethodI0C_yypSgctFTq",
+            "_$s7pay_ios20PaymentHandlerStatusON",
+            "_$s7pay_ios9PayPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctFTq",
+            "_$s7pay_ios18ApplePayButtonViewC4viewSo6UIViewCyFTq",
+            "_$s7pay_ios25ApplePayButtonViewFactoryCMn",
+            "_$sSo15CNPostalAddressC7pay_iosE12toDictionarySDySSypGyF",
+            "_$sSo19PKPaymentButtonTypeV7pay_iosE10fromStringyABSgSSFZ",
+            "_$s7pay_ios14PaymentHandlerCN",
+            "_$s7pay_ios18ApplePayButtonViewC23buttonMethodChannelNameSSvpZ",
+            "_$s7pay_ios25ApplePayButtonViewFactoryCMa",
+            "_$s7pay_ios18ApplePayButtonViewCMa",
+            "_$sSo20PKMerchantCapabilityV7pay_iosE10fromStringyABSgSSFZ",
+            "_$sSo20PKPaymentButtonStyleV7pay_iosE10fromStringyABSgSSFZ",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvgTq",
+            "_$s7pay_ios18ApplePayButtonViewC06handlecdE6TappedyyFTq",
+            "_pay_iosVersionNumber",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvs",
+            "_$s7pay_ios18ApplePayButtonViewC5_view33_8AE0879CCA5EA46F8286CA353DB85A52LLSo6UIViewCvM",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvpMV",
+            "_$s7pay_ios14PaymentHandlerC05startC06result20paymentConfiguration0G5ItemsyyypSgc_SSSaySDySSAHGGtFTq",
+            "_$s7pay_ios14PaymentHandlerC043paymentAuthorizationControllerWillAuthorizeC0yySo09PKPaymentfG0CF",
+            "_$s7pay_ios9PayPluginC8register4withySo07FlutterD9Registrar_p_tFZ",
+            "_$s7pay_ios18ApplePayButtonViewC5_view33_8AE0879CCA5EA46F8286CA353DB85A52LLSo6UIViewCvs",
+            "_$s7pay_ios18ApplePayButtonViewC5_view33_8AE0879CCA5EA46F8286CA353DB85A52LLSo6UIViewCvg",
+            "_$s7pay_ios18ApplePayButtonViewCN",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC9messengerACSo22FlutterBinaryMessenger_p_tcfCTq",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvpWvd",
+            "_$s7pay_ios20PaymentHandlerStatusO21__derived_enum_equalsySbAC_ACtFZ",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvg",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvM",
+            "_$s7pay_ios9PayPluginC013methodUserCanC033_27ECFF441B671714DBA1A6635FF21ED4LLSSvpfi",
+            "_$s7pay_ios14PaymentHandlerC39paymentAuthorizationControllerDidFinishyySo09PKPaymentfG0CF",
+            "_$s7pay_ios14PaymentHandlerC13paymentResultyypSgcSgvMTq",
+            "_$sSo9PKPaymentC7pay_iosE12toDictionarySDySSypGyF",
+            "_$s7pay_ios14PaymentHandlerC15canMakePaymentsySbSSFTq",
+            "_$s7pay_ios14PaymentHandlerC07paymentD6StatusAA0cdF0OSgvs",
+            "_$s7pay_ios25ApplePayButtonViewFactoryC9messenger33_8AE0879CCA5EA46F8286CA353DB85A52LLSo22FlutterBinaryMessenger_pvM",
+            "_$s7pay_ios9PayPluginCfD",
+            "_$s7pay_ios25ApplePayButtonViewFactoryCN",
+            "_$s7pay_ios18ApplePayButtonViewC5frame14viewIdentifier9arguments15binaryMessengerACSo6CGRectV_s5Int64VypSgSo013FlutterBinaryL0_ptcfC",
+            "_$sSo14PKContactFielda7pay_iosE10fromStringyABSgSSFZ",
+            "_$s7pay_ios20PaymentHandlerStatusOSQAAMc",
+            "_pay_iosVersionString",
+            "_$s7pay_ios9PayPluginC14paymentHandler33_27ECFF441B671714DBA1A6635FF21ED4LLAA07PaymentF0Cvpfi",
+            "_$s7pay_ios18ApplePayButtonViewC06createcdF04type5style12cornerRadiusySS_SSSfSgtFTq",
+            "_$s7pay_ios9PayPluginCMa",
+            "_$s7pay_ios9PayPluginCACycfc",
+            "_$s7pay_ios14PaymentHandlerC05startC06result20paymentConfiguration0G5ItemsyyypSgc_SSSaySDySSAHGGtF",
+            "_$s7pay_ios9PayPluginCMn",
+            "_$s7pay_ios20PaymentHandlerStatusO4hash4intoys6HasherVz_tF"
+          ],
+          "objc_class": [
+            "_TtC7pay_ios18ApplePayButtonView",
+            "PodsDummy_pay_ios",
+            "_TtC7pay_ios14PaymentHandler",
+            "_TtC7pay_ios9PayPlugin",
+            "_TtC7pay_ios25ApplePayButtonViewFactory"
+          ]
+        }
+      },
+      {
+        "data": {
+          "global": [
+            "_Swift50Overrides",
+            "_Swift51Overrides"
+          ]
+        },
+        "targets": [
+          "x86_64-ios-simulator"
+        ],
+        "text": {
+          "global": [
+            "__ZN5swift39swift51override_conformsToSwiftProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEN7__swift9__runtime4llvm9StringRefEPFPKNS_35TargetProtocolConformanceDescriptorIS1_EES4_S8_SC_E",
+            "__ZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_E",
+            "__Z34_swiftoverride_class_getSuperclassPKN5swift14TargetMetadataINS_9InProcessEEE"
+          ]
+        }
+      }
+    ],
+    "flags": [
+      {
+        "attributes": [
+          "not_app_extension_safe"
+        ]
+      }
+    ],
+    "install_names": [
+      {
+        "name": "@rpath/pay_ios.framework/pay_ios"
+      }
+    ],
+    "swift_abi": [
+      {
+        "abi": 7
+      }
+    ],
+    "target_info": [
+      {
+        "min_deployment": "12",
+        "target": "x86_64-ios-simulator"
+      },
+      {
+        "min_deployment": "14",
+        "target": "arm64-ios-simulator"
+      }
+    ]
+  },
+  "tapi_tbd_version": 5
+}

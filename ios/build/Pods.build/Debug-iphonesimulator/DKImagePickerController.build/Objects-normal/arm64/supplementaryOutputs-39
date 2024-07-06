@@ -1,18 +1,18 @@
-"/Users/dilshadp/nexamart/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageBaseManager.swift":
-  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageBaseManager.swiftconstvalues"
-  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageBaseManager.o"
-  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageBaseManager.dia"
-  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageBaseManager.swiftdeps"
-  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageBaseManager.d"
-"/Users/dilshadp/nexamart/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageDataManager.swift":
-  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageDataManager.swiftdeps"
-  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageDataManager.swiftconstvalues"
-  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageDataManager.dia"
-  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageDataManager.o"
-  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageDataManager.d"
-"/Users/dilshadp/nexamart/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageAssetExporter.swift":
-  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageAssetExporter.d"
-  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageAssetExporter.swiftdeps"
-  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageAssetExporter.o"
-  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageAssetExporter.swiftconstvalues"
-  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImageAssetExporter.dia"
+"/Users/dilshadp/nexamart/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerControllerBaseUIDelegate.swift":
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerBaseUIDelegate.dia"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerBaseUIDelegate.o"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerBaseUIDelegate.swiftconstvalues"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerBaseUIDelegate.d"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerBaseUIDelegate.swiftdeps"
+"/Users/dilshadp/nexamart/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerController.swift":
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerController.d"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerController.o"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerController.swiftconstvalues"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerController.swiftdeps"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerController.dia"
+"/Users/dilshadp/nexamart/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/Resource/DKImagePickerControllerResource.swift":
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerResource.swiftdeps"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerResource.o"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerResource.dia"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerResource.d"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKImagePickerController.build/Objects-normal/arm64/DKImagePickerControllerResource.swiftconstvalues"

@@ -39,9 +39,9 @@ class _BottomBarState extends State<BottomBar> {
       body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _page,
-        selectedItemColor: GlobalVariables.selectedNavBarColor,
+        selectedItemColor: GlobalVariables.backgroundColor,
         unselectedItemColor: GlobalVariables.unselectedNavBarColor,
-        backgroundColor: GlobalVariables.backgroundColor,
+        backgroundColor: GlobalVariables.selectedNavBarColor,
         iconSize: 28,
         onTap: updatePage,
         items: [
@@ -52,8 +52,8 @@ class _BottomBarState extends State<BottomBar> {
                   border: Border(
                     top: BorderSide(
                       color: _page == 0
-                          ? GlobalVariables.selectedNavBarColor
-                          : GlobalVariables.backgroundColor,
+                          ? GlobalVariables.backgroundColor
+                          : GlobalVariables.selectedNavBarColor,
                       width: bottomBarBorderWidth,
                     ),
                   ),
@@ -68,8 +68,8 @@ class _BottomBarState extends State<BottomBar> {
                   border: Border(
                     top: BorderSide(
                       color: _page == 1
-                          ? GlobalVariables.selectedNavBarColor
-                          : GlobalVariables.backgroundColor,
+                          ? GlobalVariables.backgroundColor
+                          : GlobalVariables.selectedNavBarColor,
                       width: bottomBarBorderWidth,
                     ),
                   ),
@@ -84,8 +84,8 @@ class _BottomBarState extends State<BottomBar> {
                     border: Border(
                       top: BorderSide(
                         color: _page == 2
-                            ? GlobalVariables.selectedNavBarColor
-                            : GlobalVariables.backgroundColor,
+                            ? GlobalVariables.backgroundColor
+                            : GlobalVariables.selectedNavBarColor,
                         width: bottomBarBorderWidth,
                       ),
                     ),

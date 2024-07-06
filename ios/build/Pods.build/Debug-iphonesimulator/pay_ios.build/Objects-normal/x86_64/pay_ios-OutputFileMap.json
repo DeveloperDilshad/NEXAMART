@@ -1,0 +1,48 @@
+{
+  "" : {
+    "diagnostics" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/pay_ios-master.dia",
+    "emit-module-dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/pay_ios-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/pay_ios-master-emit-module.dia",
+    "swift-dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/pay_ios-master.swiftdeps"
+  },
+  "/Users/dilshadp/.pub-cache/hosted/pub.dev/pay_ios-1.0.11/ios/Classes/ApplePayButtonView.swift" : {
+    "const-values" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.swiftconstvalues",
+    "dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.d",
+    "diagnostics" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.o",
+    "llvm-bc" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.bc",
+    "object" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.o",
+    "swift-dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView.swiftdeps",
+    "swiftmodule" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/ApplePayButtonView~partial.swiftmodule"
+  },
+  "/Users/dilshadp/.pub-cache/hosted/pub.dev/pay_ios-1.0.11/ios/Classes/PaymentExtensions.swift" : {
+    "const-values" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.swiftconstvalues",
+    "dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.d",
+    "diagnostics" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.o",
+    "llvm-bc" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.bc",
+    "object" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.o",
+    "swift-dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions.swiftdeps",
+    "swiftmodule" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentExtensions~partial.swiftmodule"
+  },
+  "/Users/dilshadp/.pub-cache/hosted/pub.dev/pay_ios-1.0.11/ios/Classes/PaymentHandler.swift" : {
+    "const-values" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.swiftconstvalues",
+    "dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.d",
+    "diagnostics" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.o",
+    "llvm-bc" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.bc",
+    "object" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.o",
+    "swift-dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler.swiftdeps",
+    "swiftmodule" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PaymentHandler~partial.swiftmodule"
+  },
+  "/Users/dilshadp/.pub-cache/hosted/pub.dev/pay_ios-1.0.11/ios/Classes/PayPlugin.swift" : {
+    "const-values" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.swiftconstvalues",
+    "dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.d",
+    "diagnostics" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.o",
+    "llvm-bc" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.bc",
+    "object" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.o",
+    "swift-dependencies" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin.swiftdeps",
+    "swiftmodule" : "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/pay_ios.build/Objects-normal/x86_64/PayPlugin~partial.swiftmodule"
+  }
+}

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:nexamart/provider/user_provider.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +13,7 @@ class CartSubtotal extends StatelessWidget {
     for (var item in user.cart) {
       var quantity = item['quantity'] as int;
       var product = item['product'] as Map<String, dynamic>;
-      var price = product['price'].toDouble(); // Ensuring price is a double
+      var price = product['price'].toDouble();
       sum += quantity * price;
     }
     return Container(

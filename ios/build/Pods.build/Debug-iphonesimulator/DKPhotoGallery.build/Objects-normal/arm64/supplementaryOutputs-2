@@ -1,0 +1,24 @@
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryContentVC.swift":
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryContentVC.swiftconstvalues"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryContentVC.dia"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryContentVC.swiftdeps"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryContentVC.o"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryContentVC.d"
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGallery.swift":
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGallery.swiftconstvalues"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGallery.dia"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGallery.o"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGallery.swiftdeps"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGallery.d"
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryInteractiveTransition.swift":
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryInteractiveTransition.swiftdeps"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryInteractiveTransition.swiftconstvalues"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryInteractiveTransition.d"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryInteractiveTransition.dia"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryInteractiveTransition.o"
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryItem.swift":
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryItem.o"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryItem.d"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryItem.dia"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryItem.swiftdeps"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoGalleryItem.swiftconstvalues"

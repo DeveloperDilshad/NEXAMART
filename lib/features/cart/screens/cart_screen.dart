@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nexamart/common/widgets/custon_button.dart';
 import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/features/address/screens/address_screen.dart';
+import 'package:nexamart/features/admin/screens/add_product_screen.dart';
 import 'package:nexamart/features/cart/widgets/cart_product.dart';
 import 'package:nexamart/features/cart/widgets/cart_subtotal.dart';
 import 'package:nexamart/features/home/widgets/address_box.dart';
@@ -20,9 +22,25 @@ class _CartScreenState extends State<CartScreen> {
     Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
   }
 
+  void navigateToAddressScreen(int sum) {
+    Navigator.pushNamed(
+      context,
+      AddressScreen.routeName,
+      arguments: sum.toString(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final user = context.watch<UserProvider>().user;
+    double sum = 0;
+
+    for (var item in user.cart) {
+      var quantity = item['quantity'] as int;
+      var product = item['product'] as Map<String, dynamic>;
+      var price = product['price'].toDouble();
+      sum += quantity * price;
+    }
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
@@ -105,7 +123,7 @@ class _CartScreenState extends State<CartScreen> {
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
                 text: 'Proceed to Buy(${user.cart.length})',
-                onTap: () {},
+                onTap: () => navigateToAddressScreen(sum.toInt()),
                 color: Colors.yellow[600],
               ),
             ),
@@ -120,13 +138,14 @@ class _CartScreenState extends State<CartScreen> {
               height: 5,
             ),
             ListView.builder(
-                itemCount: user.cart.length,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  return CartProduct(
-                    index: index,
-                  );
-                })
+              itemCount: user.cart.length,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return CartProduct(
+                  index: index,
+                );
+              },
+            ),
           ],
         ),
       ),

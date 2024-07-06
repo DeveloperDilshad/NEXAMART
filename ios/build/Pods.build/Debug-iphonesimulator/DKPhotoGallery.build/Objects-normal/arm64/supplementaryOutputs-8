@@ -1,0 +1,18 @@
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/QRCode/DKPhotoWebVC.swift":
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoWebVC.d"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoWebVC.dia"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoWebVC.swiftconstvalues"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoWebVC.swiftdeps"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoWebVC.o"
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/QRCode/DKPhotoQRCodeResultVC.swift":
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoQRCodeResultVC.swiftconstvalues"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoQRCodeResultVC.o"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoQRCodeResultVC.swiftdeps"
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoQRCodeResultVC.dia"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoQRCodeResultVC.d"
+"/Users/dilshadp/nexamart/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PlayerPreview/DKPlayerView.swift":
+  diagnostics: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPlayerView.dia"
+  swift-dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPlayerView.swiftdeps"
+  dependencies: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPlayerView.d"
+  const-values: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPlayerView.swiftconstvalues"
+  object: "/Users/dilshadp/nexamart/ios/build/Pods.build/Debug-iphonesimulator/DKPhotoGallery.build/Objects-normal/arm64/DKPlayerView.o"
