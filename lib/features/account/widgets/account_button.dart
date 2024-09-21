@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nexamart/constants/global_variables.dart';
 
 class AccountButton extends StatelessWidget {
   final String text;
@@ -18,7 +19,7 @@ class AccountButton extends StatelessWidget {
         ),
         child: OutlinedButton(
           style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black12.withOpacity(0.03),
+              backgroundColor: GlobalVariables.secondaryColor.withOpacity(0.3),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),
               )),

@@ -78,11 +78,17 @@ class _CartProductState extends State<CartProduct> {
                   Container(
                     width: 235,
                     padding: const EdgeInsets.only(left: 10, top: 5),
-                    child: const Text(
-                      'In Stocks',
-                      style: TextStyle(color: Colors.teal),
-                      maxLines: 2,
-                    ),
+                    child: product.quantity != 0
+                        ? const Text(
+                            'In Stocks',
+                            style: TextStyle(color: Colors.teal),
+                            maxLines: 2,
+                          )
+                        : const Text(
+                            'Out of Stocks',
+                            style: TextStyle(color: Colors.red),
+                            maxLines: 2,
+                          ),
                   ),
                 ],
               )

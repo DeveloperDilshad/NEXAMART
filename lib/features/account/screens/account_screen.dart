@@ -10,12 +10,13 @@ class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: GlobalVariables.greyBackgroundCOlor,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
           flexibleSpace: Container(
             decoration: const BoxDecoration(
-              gradient: GlobalVariables.appBarGradient,
+              color: GlobalVariables.backgroundColor,
             ),
           ),
           title: Row(
@@ -45,15 +46,19 @@ class AccountScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          BelowAppBar(),
-          SizedBox(
+          const BelowAppBar(),
+          Container(
+            color: GlobalVariables.secondaryColor,
+            height: 1,
+          ),
+          const SizedBox(
             height: 10,
           ),
-          TopButtons(),
-          SizedBox(height: 20),
-          Orders()
+          const TopButtons(),
+          const SizedBox(height: 20),
+          const Orders()
         ],
       ),
     );

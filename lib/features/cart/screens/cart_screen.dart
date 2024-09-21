@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nexamart/common/widgets/custon_button.dart';
 import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/constants/utils.dart';
 import 'package:nexamart/features/address/screens/address_screen.dart';
-import 'package:nexamart/features/admin/screens/add_product_screen.dart';
 import 'package:nexamart/features/cart/widgets/cart_product.dart';
 import 'package:nexamart/features/cart/widgets/cart_subtotal.dart';
 import 'package:nexamart/features/home/widgets/address_box.dart';
@@ -42,13 +42,13 @@ class _CartScreenState extends State<CartScreen> {
       sum += quantity * price;
     }
     return Scaffold(
+      backgroundColor: GlobalVariables.greyBackgroundCOlor,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppBar(
           flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: GlobalVariables.appBarGradient,
-            ),
+            decoration:
+                const BoxDecoration(color: GlobalVariables.backgroundColor),
           ),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,14 +63,23 @@ class _CartScreenState extends State<CartScreen> {
                     child: TextFormField(
                       onFieldSubmitted: navigateToSearchScreen,
                       decoration: InputDecoration(
-                        prefixIcon: InkWell(
+                        prefixIcon: const SizedBox(),
+                        suffixIcon: InkWell(
                           onTap: () {},
-                          child: const Padding(
-                            padding: EdgeInsets.only(left: 6),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 23,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(7),
+                                  bottomRight: Radius.circular(7)),
+                              color: GlobalVariables.secondaryColor,
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.only(left: 6),
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                                size: 23,
+                              ),
                             ),
                           ),
                         ),
@@ -123,8 +132,10 @@ class _CartScreenState extends State<CartScreen> {
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
                 text: 'Proceed to Buy(${user.cart.length})',
-                onTap: () => navigateToAddressScreen(sum.toInt()),
-                color: Colors.yellow[600],
+                onTap: () => sum == 0
+                    ? showSnackbar(context, 'Add a product for purchase')
+                    : navigateToAddressScreen(sum.toInt()),
+                color: GlobalVariables.secondaryColor,
               ),
             ),
             const SizedBox(

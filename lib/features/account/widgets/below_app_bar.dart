@@ -11,7 +11,7 @@ class BelowAppBar extends StatelessWidget {
     final user = Provider.of<UserProvider>(context).user;
     return Container(
       decoration: const BoxDecoration(
-        gradient: GlobalVariables.appBarGradient,
+        color: GlobalVariables.backgroundColor,
       ),
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
       child: Row(

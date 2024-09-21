@@ -1,8 +1,9 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class Rating {
   final String userId;
-  final double rating;
+  late final double rating;
   Rating({
     required this.userId,
     required this.rating,
@@ -27,4 +28,14 @@ class Rating {
 
   factory Rating.fromJson(String source) =>
       Rating.fromMap(json.decode(source) as Map<String, dynamic>);
+
+  Rating copyWith({
+    String? userId,
+    double? rating,
+  }) {
+    return Rating(
+      userId: userId ?? this.userId,
+      rating: rating ?? this.rating,
+    );
+  }
 }

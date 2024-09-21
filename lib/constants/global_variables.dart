@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String uri = 'http://127.0.0.1:3000';
+String uri = 'https://nexamart-server.onrender.com';
 
 class GlobalVariables {
   static const appBarGradient = LinearGradient(
@@ -18,7 +18,7 @@ class GlobalVariables {
   static const unselectedNavBarColor = Colors.black87;
 
   static const List<String> carouselImages = [
-    'https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/TS/D37847648_Accessories_savingdays_Jan22_Cat_PC_1500.jpg',
+    'https://images-na.ssl-images-amazon.com/images/G/31/Symbol/2020/00NEW/1242_450Banners/PL31_copy._CB432483346_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/img2021/Vday/bwl/English.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/AdvantagePrime/BAU/14thJan/D37196025_IN_WL_AdvantageJustforPrime_Jan_Mob_ingress-banner_1242x450.jpg',
     'https://images-na.ssl-images-amazon.com/images/G/31/Symbol/2020/00NEW/1242_450Banners/PL31_copy._CB432483346_.jpg',
@@ -28,7 +28,7 @@ class GlobalVariables {
   static const List<Map<String, String>> categoryImages = [
     {
       'title': 'Mobiles',
-      'image': 'assets/images/mobiles.jpeg',
+      'image': 'assets/images/mobiles.png',
     },
     {
       'title': 'Essentials',
@@ -36,15 +36,15 @@ class GlobalVariables {
     },
     {
       'title': 'Appliances',
-      'image': 'assets/images/appliances.jpeg',
+      'image': 'assets/images/appliances.png',
     },
     {
       'title': 'Books',
-      'image': 'assets/images/books.jpeg',
+      'image': 'assets/images/books.png',
     },
     {
       'title': 'Fashion',
-      'image': 'assets/images/fashion.jpeg',
+      'image': 'assets/images/fashion.png',
     },
   ];
 }

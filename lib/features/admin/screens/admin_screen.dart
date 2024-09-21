@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/features/account/services/account_services.dart';
+import 'package:nexamart/features/admin/screens/analytics_screen.dart';
+import 'package:nexamart/features/admin/screens/orders_screen.dart';
 import 'package:nexamart/features/admin/screens/post_screen.dart';
 
 class AdminScreen extends StatefulWidget {
+  static const String routeName = '/admin';
   const AdminScreen({super.key});
 
   @override
@@ -10,18 +14,15 @@ class AdminScreen extends StatefulWidget {
 }
 
 class _AdminScreenState extends State<AdminScreen> {
+  final AccountServices accountServices = AccountServices();
   int _page = 0;
   double bottomBarWidth = 42;
   double bottomBarBorderWidth = 5;
 
   List<Widget> pages = [
     const PostScreen(),
-    const Center(
-      child: Text('Analytics page'),
-    ),
-    const Center(
-      child: Text('Cart page'),
-    ),
+    const AnalyticsScreen(),
+    const OrdersScreen()
   ];
 
   void updatePage(int page) {
@@ -55,7 +56,11 @@ class _AdminScreenState extends State<AdminScreen> {
               const Text(
                 'Admin',
                 style: TextStyle(fontWeight: FontWeight.bold),
-              )
+              ),
+              IconButton(
+                onPressed: () => accountServices.logout(context),
+                icon: const Icon(Icons.logout_outlined),
+              ),
             ],
           ),
         ),

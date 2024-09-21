@@ -54,6 +54,9 @@ class _PostScreenState extends State<PostScreen> {
                   final productData = products![index];
                   return Column(
                     children: [
+                      const SizedBox(
+                        height: 8,
+                      ),
                       SizedBox(
                         height: 140,
                         child: SingleProduct(
@@ -63,6 +66,9 @@ class _PostScreenState extends State<PostScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          const SizedBox(
+                            width: 10,
+                          ),
                           Expanded(
                             child: Text(
                               productData.name,

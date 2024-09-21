@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nexamart/models/rating.dart';
 import 'package:nexamart/models/user.dart';
 
 class UserProvider extends ChangeNotifier {
@@ -22,6 +23,18 @@ class UserProvider extends ChangeNotifier {
 
   void setUserFromModel(User user) {
     _user = user;
+    notifyListeners();
+  }
+
+  Rating _rating = Rating(
+    userId: '',
+    rating: 0,
+  );
+
+  Rating get rating => _rating;
+
+  void setRating(Rating rating) {
+    _rating = rating;
     notifyListeners();
   }
 }

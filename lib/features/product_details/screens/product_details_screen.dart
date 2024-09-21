@@ -4,6 +4,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:nexamart/common/widgets/custon_button.dart';
 import 'package:nexamart/common/widgets/stars.dart';
 import 'package:nexamart/constants/global_variables.dart';
+import 'package:nexamart/constants/utils.dart';
+import 'package:nexamart/features/address/screens/address_screen.dart';
 import 'package:nexamart/features/product_details/services/product_details_services.dart';
 import 'package:nexamart/features/search/screens/search_screen.dart';
 import 'package:nexamart/models/product.dart';
@@ -37,6 +39,14 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
+  void navigateToAddressScreen(int sum) {
+    Navigator.pushNamed(
+      context,
+      AddressScreen.routeName,
+      arguments: sum.toString(),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -55,6 +65,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context).user;
+    double sum = 0;
+    sum = widget.product.price;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
@@ -207,7 +220,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               padding: const EdgeInsets.all(10.0),
               child: CustomButton(
                 text: 'Buy Now',
-                onTap: () {},
+                onTap: () => userProvider.token.isNotEmpty
+                    ? navigateToAddressScreen(sum.toInt())
+                    : showSnackbar(context, 'Please Login'),
               ),
             ),
             const SizedBox(
@@ -217,7 +232,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               padding: const EdgeInsets.all(10.0),
               child: CustomButton(
                 text: 'Add to Cart',
-                onTap: addToCart,
+                onTap: () => userProvider.token.isNotEmpty
+                    ? addToCart()
+                    : showSnackbar(context, 'Please Login'),
                 color: const Color.fromARGB(255, 252, 150, 67),
               ),
             ),
@@ -235,22 +252,32 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),
-            RatingBar.builder(
-              initialRating: myRating,
-              minRating: 1,
-              direction: Axis.horizontal,
-              allowHalfRating: true,
-              itemCount: 5,
-              itemPadding: const EdgeInsets.symmetric(horizontal: 4),
-              itemBuilder: (context, _) => const Icon(
-                Icons.star,
-                color: Color.fromARGB(255, 238, 176, 82),
-              ),
-              onRatingUpdate: (rating) {
-                productDetailsServices.rateProducts(
-                    context: context, product: widget.product, rating: rating);
-              },
-            ),
+            userProvider.token.isNotEmpty
+                ? RatingBar.builder(
+                    initialRating: myRating,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Color.fromARGB(255, 238, 176, 82),
+                    ),
+                    onRatingUpdate: (rating) {
+                      productDetailsServices.rateProducts(
+                          context: context,
+                          product: widget.product,
+                          rating: rating);
+                    },
+                  )
+                : InkWell(
+                    onTap: () => showSnackbar(context, 'Please Login'),
+                    child: Stars(
+                      rating: avgRating,
+                      itemSize: 45,
+                    ),
+                  )
           ],
         ),
       ),

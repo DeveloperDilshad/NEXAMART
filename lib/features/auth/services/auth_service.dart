@@ -1,11 +1,10 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:nexamart/common/widgets/bottom_bar.dart';
 import 'package:nexamart/constants/error_handling.dart';
 import 'package:nexamart/constants/global_variables.dart';
 import 'package:nexamart/constants/utils.dart';
-import 'package:nexamart/features/home/screens/home_screen.dart';
+import 'package:nexamart/features/admin/screens/admin_screen.dart';
 import 'package:nexamart/models/user.dart';
 import 'package:http/http.dart' as http;
 import 'package:nexamart/provider/user_provider.dart';
@@ -72,8 +71,12 @@ class AuthService {
             Provider.of<UserProvider>(context, listen: false).setUser(res.body);
             await prefs.setString(
                 'x-auth-token', jsonDecode(res.body)['token']);
-            Navigator.pushNamedAndRemoveUntil(
-                context, BottomBar.routeName, (route) => false);
+            Provider.of<UserProvider>(context, listen: false).user.type ==
+                    'user'
+                ? Navigator.pushNamedAndRemoveUntil(
+                    context, BottomBar.routeName, (route) => false)
+                : Navigator.pushNamedAndRemoveUntil(
+                    context, AdminScreen.routeName, (route) => false);
           });
     } catch (e) {
       showSnackbar(
@@ -83,7 +86,7 @@ class AuthService {
     }
   }
 
-  void getUserData(BuildContext context) async {
+  Future<void> getUserData(BuildContext context) async {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String? token = prefs.getString('x-auth-token');

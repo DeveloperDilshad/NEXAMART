@@ -50,12 +50,9 @@ class _AddressScreenState extends State<AddressScreen> {
       applePayConfig = await rootBundle.loadString('assets/applepay.json');
       googlePayConfig = await rootBundle.loadString('assets/gpay.json');
 
-      setState(() {
-        // Update UI if necessary
-      });
+      setState(() {});
     } catch (e) {
       // Handle error
-      print('Error loading or parsing JSON: $e');
     }
   }
 
@@ -92,22 +89,24 @@ class _AddressScreenState extends State<AddressScreen> {
   void payPressed(String addressFromProvider) {
     addressToBeUsed = "";
 
-    bool isForm = flatBuildingController.text.isNotEmpty ||
+    bool isFormFilled = flatBuildingController.text.isNotEmpty ||
         areaController.text.isNotEmpty ||
         pincodeController.text.isNotEmpty ||
         cityController.text.isNotEmpty;
 
-    if (isForm) {
+    if (isFormFilled) {
       if (_addressFormKey.currentState!.validate()) {
         addressToBeUsed =
             '${flatBuildingController.text},${areaController.text},${cityController.text} - ${pincodeController.text}';
       } else {
-        throw Exception('Please Enter All Details');
+        showSnackbar(context, 'Please enter all details correctly');
+        return;
       }
     } else if (addressFromProvider.isNotEmpty) {
       addressToBeUsed = addressFromProvider;
     } else {
-      showSnackbar(context, 'ERROR');
+      showSnackbar(context, 'Please provide an address');
+      return;
     }
   }
 
@@ -124,7 +123,7 @@ class _AddressScreenState extends State<AddressScreen> {
   Widget build(BuildContext context) {
     var address = context.watch<UserProvider>().user.address;
     if (applePayConfig.isEmpty || googlePayConfig.isEmpty) {
-      return Center(
+      return const Center(
         child: CircularProgressIndicator(),
       );
     }
@@ -218,7 +217,9 @@ class _AddressScreenState extends State<AddressScreen> {
                 ),
               ),
               ApplePayButton(
-                onPressed: () => payPressed(address),
+                onPressed: () {
+                  payPressed(address);
+                },
                 width: double.infinity,
                 height: 50,
                 style: ApplePayButtonStyle.whiteOutline,
@@ -238,7 +239,9 @@ class _AddressScreenState extends State<AddressScreen> {
                     PaymentConfiguration.fromJsonString(googlePayConfig),
                 paymentItems: paymentItem,
                 onPaymentResult: onGooglePayResult,
+                width: double.infinity,
                 height: 50,
+                theme: GooglePayButtonTheme.light,
                 type: GooglePayButtonType.buy,
                 margin: const EdgeInsets.only(top: 5),
                 loadingIndicator: const Center(
