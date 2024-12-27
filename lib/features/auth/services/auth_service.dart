@@ -16,6 +16,7 @@ class AuthService {
       {required String name,
       required String email,
       required String password,
+      required String address,
       required BuildContext context}) async {
     try {
       User user = User(
@@ -23,7 +24,7 @@ class AuthService {
         name: name,
         email: email,
         password: password,
-        address: '',
+        address: address,
         type: '',
         token: '',
         cart: [],
@@ -67,16 +68,28 @@ class AuthService {
           response: res,
           context: context,
           onSuccess: () async {
+            // Parse the response
+            var responseBody = jsonDecode(res.body);
+
+            // Save token to SharedPreferences
             SharedPreferences prefs = await SharedPreferences.getInstance();
+            await prefs.setString('x-auth-token', responseBody['token']);
+
+            // Set the user in UserProvider
             Provider.of<UserProvider>(context, listen: false).setUser(res.body);
-            await prefs.setString(
-                'x-auth-token', jsonDecode(res.body)['token']);
-            Provider.of<UserProvider>(context, listen: false).user.type ==
-                    'user'
-                ? Navigator.pushNamedAndRemoveUntil(
-                    context, BottomBar.routeName, (route) => false)
-                : Navigator.pushNamedAndRemoveUntil(
-                    context, AdminScreen.routeName, (route) => false);
+
+            // Check if the user is an admin
+            if (responseBody['type'] == 'user') {
+              // Navigate to AdminScreen
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                BottomBar.routeName,
+                    (route) => false,
+              );
+            } else {
+              showSnackbar(context, 'You are not authorized to access this page.');
+
+            }
           });
     } catch (e) {
       showSnackbar(

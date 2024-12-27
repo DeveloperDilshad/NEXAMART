@@ -25,6 +25,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "com.example.nexamart"
+    compileSdkVersion 33
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 

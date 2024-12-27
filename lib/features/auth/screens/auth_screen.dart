@@ -19,31 +19,39 @@ class _AuthScreenState extends State<AuthScreen> {
   final _signUpFormKey = GlobalKey<FormState>();
   final _signInFormKey = GlobalKey<FormState>();
   final AuthService authService = AuthService();
-  final TextEditingController _emailControiller = TextEditingController();
-  final TextEditingController _passwordControiller = TextEditingController();
-  final TextEditingController _nameControiller = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+  TextEditingController();
+  final TextEditingController _addressController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
   @override
   void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    _addressController.dispose();
+    _nameController.dispose();
     super.dispose();
-    _emailControiller.dispose();
-    _passwordControiller.dispose();
-    _nameControiller.dispose();
   }
 
   void signupUser() {
     authService.signupUser(
-        name: _nameControiller.text,
-        email: _emailControiller.text,
-        password: _passwordControiller.text,
-        context: context);
+      name: _nameController.text,
+      email: _emailController.text,
+      password: _passwordController.text,
+      address: _addressController.text,
+      context: context,
+    );
   }
 
   void signinUser() {
     authService.signinUser(
-        email: _emailControiller.text,
-        password: _passwordControiller.text,
-        context: context);
+      email: _emailController.text,
+      password: _passwordController.text,
+      context: context,
+    );
   }
 
   @override
@@ -90,33 +98,54 @@ class _AuthScreenState extends State<AuthScreen> {
                   child: Column(
                     children: [
                       CustomTextfield(
-                        controller: _nameControiller,
+                        controller: _nameController,
                         hintText: 'Name',
+                        keyboardType: TextInputType.name,
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       CustomTextfield(
-                        controller: _emailControiller,
+                        controller: _emailController,
                         hintText: 'Email',
+                        keyboardType: TextInputType.emailAddress,
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       CustomTextfield(
-                        controller: _passwordControiller,
+                        controller: _addressController,
+                        hintText: 'Pincode',
+                        keyboardType: TextInputType.number,
+                      ),
+                      const SizedBox(height: 10),
+                      CustomTextfield(
+                        controller: _passwordController,
                         hintText: 'Password',
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
                       ),
-                      const SizedBox(
-                        height: 10,
+                      const SizedBox(height: 10),
+                      CustomTextfield(
+                        controller: _confirmPasswordController,
+                        hintText: 'Re-enter the Password',
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please confirm your password';
+                          }
+                          if (value != _passwordController.text) {
+                            return 'Passwords do not match';
+                          }
+                          return null;
+                        },
                       ),
+                      const SizedBox(height: 10),
                       CustomButton(
-                          text: 'Sign Up',
-                          onTap: () {
-                            if (_signUpFormKey.currentState!.validate()) {
-                              signupUser();
-                            }
-                          })
+                        text: 'Sign Up',
+                        onTap: () {
+                          if (_signUpFormKey.currentState!.validate()) {
+                            signupUser();
+                          }
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -154,14 +183,14 @@ class _AuthScreenState extends State<AuthScreen> {
                         height: 10,
                       ),
                       CustomTextfield(
-                        controller: _emailControiller,
+                        controller: _emailController,
                         hintText: 'Email',
                       ),
                       const SizedBox(
                         height: 10,
                       ),
                       CustomTextfield(
-                        controller: _passwordControiller,
+                        controller: _passwordController,
                         hintText: 'Password',
                       ),
                       const SizedBox(

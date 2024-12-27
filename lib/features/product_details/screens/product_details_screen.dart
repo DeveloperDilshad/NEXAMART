@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:nexamart/common/widgets/custon_button.dart';
@@ -23,7 +22,7 @@ class ProductDetailsScreen extends StatefulWidget {
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   final ProductDetailsServices productDetailsServices =
-      ProductDetailsServices();
+  ProductDetailsServices();
 
   void navigateToSearchScreen(String query) {
     Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
@@ -115,7 +114,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             Radius.circular(7),
                           ),
                           borderSide:
-                              BorderSide(color: Colors.black38, width: 1),
+                          BorderSide(color: Colors.black38, width: 1),
                         ),
                         hintText: 'Search NexaMart.in',
                         hintStyle: const TextStyle(
@@ -166,21 +165,17 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 ),
               ),
             ),
-            CarouselSlider(
-              items: widget.product.images.map(
-                (i) {
-                  return Builder(
-                    builder: (BuildContext context) => Image.network(
-                      i,
-                      fit: BoxFit.contain,
-                      height: 200,
-                    ),
+            // PageView instead of CarouselSlider
+            Container(
+              height: 300, // Set the height to fit your design
+              child: PageView.builder(
+                itemCount: widget.product.images.length,
+                itemBuilder: (context, index) {
+                  return Image.network(
+                    widget.product.images[index],
+                    fit: BoxFit.contain,
                   );
                 },
-              ).toList(),
-              options: CarouselOptions(
-                viewportFraction: 1,
-                height: 300,
               ),
             ),
             Container(
@@ -254,30 +249,30 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ),
             userProvider.token.isNotEmpty
                 ? RatingBar.builder(
-                    initialRating: myRating,
-                    minRating: 1,
-                    direction: Axis.horizontal,
-                    allowHalfRating: true,
-                    itemCount: 5,
-                    itemPadding: const EdgeInsets.symmetric(horizontal: 4),
-                    itemBuilder: (context, _) => const Icon(
-                      Icons.star,
-                      color: Color.fromARGB(255, 238, 176, 82),
-                    ),
-                    onRatingUpdate: (rating) {
-                      productDetailsServices.rateProducts(
-                          context: context,
-                          product: widget.product,
-                          rating: rating);
-                    },
-                  )
+              initialRating: myRating,
+              minRating: 1,
+              direction: Axis.horizontal,
+              allowHalfRating: true,
+              itemCount: 5,
+              itemPadding: const EdgeInsets.symmetric(horizontal: 4),
+              itemBuilder: (context, _) => const Icon(
+                Icons.star,
+                color: Color.fromARGB(255, 238, 176, 82),
+              ),
+              onRatingUpdate: (rating) {
+                productDetailsServices.rateProducts(
+                    context: context,
+                    product: widget.product,
+                    rating: rating);
+              },
+            )
                 : InkWell(
-                    onTap: () => showSnackbar(context, 'Please Login'),
-                    child: Stars(
-                      rating: avgRating,
-                      itemSize: 45,
-                    ),
-                  )
+              onTap: () => showSnackbar(context, 'Please Login'),
+              child: Stars(
+                rating: avgRating,
+                itemSize: 45,
+              ),
+            )
           ],
         ),
       ),
