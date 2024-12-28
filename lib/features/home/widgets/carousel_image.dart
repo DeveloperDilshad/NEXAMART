@@ -16,7 +16,7 @@ class _PageViewImageState extends State<PageViewImage> {
   void initState() {
     super.initState();
     // Auto-scrolling (optional, change duration as needed)
-    Future.delayed(Duration(seconds: 3), _autoScroll);
+    Future.delayed(const Duration(seconds: 3), _autoScroll);
   }
 
   // Auto-scrolling function
@@ -64,9 +64,7 @@ class _PageViewImageState extends State<PageViewImage> {
                 margin: const EdgeInsets.symmetric(horizontal: 4.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: _currentIndex == entry.key
-                      ? Colors.blue
-                      : Colors.grey,
+                  color: _currentIndex == entry.key ? Colors.blue : Colors.grey,
                 ),
               ),
             );

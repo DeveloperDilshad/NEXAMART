@@ -4,7 +4,6 @@ import 'package:nexamart/common/widgets/bottom_bar.dart';
 import 'package:nexamart/constants/error_handling.dart';
 import 'package:nexamart/constants/global_variables.dart';
 import 'package:nexamart/constants/utils.dart';
-import 'package:nexamart/features/admin/screens/admin_screen.dart';
 import 'package:nexamart/models/user.dart';
 import 'package:http/http.dart' as http;
 import 'package:nexamart/provider/user_provider.dart';
@@ -84,11 +83,11 @@ class AuthService {
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 BottomBar.routeName,
-                    (route) => false,
+                (route) => false,
               );
             } else {
-              showSnackbar(context, 'You are not authorized to access this page.');
-
+              showSnackbar(
+                  context, 'You are not authorized to access this page.');
             }
           });
     } catch (e) {

@@ -22,7 +22,7 @@ class ProductDetailsScreen extends StatefulWidget {
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   final ProductDetailsServices productDetailsServices =
-  ProductDetailsServices();
+      ProductDetailsServices();
 
   void navigateToSearchScreen(String query) {
     Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
@@ -114,7 +114,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             Radius.circular(7),
                           ),
                           borderSide:
-                          BorderSide(color: Colors.black38, width: 1),
+                              BorderSide(color: Colors.black38, width: 1),
                         ),
                         hintText: 'Search NexaMart.in',
                         hintStyle: const TextStyle(
@@ -166,7 +166,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               ),
             ),
             // PageView instead of CarouselSlider
-            Container(
+            SizedBox(
               height: 300, // Set the height to fit your design
               child: PageView.builder(
                 itemCount: widget.product.images.length,
@@ -249,30 +249,30 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ),
             userProvider.token.isNotEmpty
                 ? RatingBar.builder(
-              initialRating: myRating,
-              minRating: 1,
-              direction: Axis.horizontal,
-              allowHalfRating: true,
-              itemCount: 5,
-              itemPadding: const EdgeInsets.symmetric(horizontal: 4),
-              itemBuilder: (context, _) => const Icon(
-                Icons.star,
-                color: Color.fromARGB(255, 238, 176, 82),
-              ),
-              onRatingUpdate: (rating) {
-                productDetailsServices.rateProducts(
-                    context: context,
-                    product: widget.product,
-                    rating: rating);
-              },
-            )
+                    initialRating: myRating,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Color.fromARGB(255, 238, 176, 82),
+                    ),
+                    onRatingUpdate: (rating) {
+                      productDetailsServices.rateProducts(
+                          context: context,
+                          product: widget.product,
+                          rating: rating);
+                    },
+                  )
                 : InkWell(
-              onTap: () => showSnackbar(context, 'Please Login'),
-              child: Stars(
-                rating: avgRating,
-                itemSize: 45,
-              ),
-            )
+                    onTap: () => showSnackbar(context, 'Please Login'),
+                    child: Stars(
+                      rating: avgRating,
+                      itemSize: 45,
+                    ),
+                  )
           ],
         ),
       ),
